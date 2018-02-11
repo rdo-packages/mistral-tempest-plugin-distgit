@@ -25,6 +25,9 @@ Source0:    http://tarballs.openstack.org/%{plugin}/%{plugin}-%{upstream_version
 
 BuildArch:  noarch
 
+BuildRequires:  git
+BuildRequires:  openstack-macros
+
 %description
 %{common_desc}
 
@@ -32,22 +35,20 @@ BuildArch:  noarch
 Summary: %{summary}
 %{?python_provide:%python_provide python2-%{service}-tests-tempest}
 BuildRequires:  python2-devel
-BuildRequires:  python-pbr
-BuildRequires:  python-setuptools
-BuildRequires:  git
-BuildRequires:  openstack-macros
+BuildRequires:  python2-pbr
+BuildRequires:  python2-setuptools
 
-Requires:   python-tempest >= 1:16.0.0
-Requires:   python-pbr
-Requires:   python-oslo-config
-Requires:   python-oslo-log
-Requires:   python-oslo-concurrency
-Requires:   python-oslo-serialization
-Requires:   python-oslo-utils
-Requires:   python-paramiko
-Requires:   python-six
-Requires:   python-mock
-Requires:   python-keystoneclient
+Requires:   python2-tempest >= 1:17.1.0
+Requires:   python2-pbr >= 2.0.0
+Requires:   python2-oslo-config >= 2:4.0.0
+Requires:   python2-oslo-log >= 3.30.0
+Requires:   python2-oslo-concurrency >= 3.20.0
+Requires:   python2-oslo-serialization >= 2.18.0
+Requires:   python2-oslo-utils >= 3.33.0
+Requires:   python2-paramiko >= 2.0.0
+Requires:   python2-six >= 1.10.0
+Requires:   python2-mock >= 2.0.0
+Requires:   python2-keystoneclient >= 3.8.0
 
 %description -n python2-%{service}-tests-tempest
 %{common_desc}
@@ -60,16 +61,16 @@ BuildRequires:  python3-devel
 BuildRequires:  python3-pbr
 BuildRequires:  python3-setuptools
 
-Requires:   python3-tempest >= 1:16.0.0
-Requires:   python3-pbr
-Requires:   python3-oslo-config
-Requires:   python3-oslo-log
-Requires:   python3-oslo-concurrency
-Requires:   python3-oslo-serialization
-Requires:   python3-oslo-utils
-Requires:   python3-paramiko
-Requires:   python3-six
-Requires:   python3-keystoneclient
+Requires:   python3-tempest >= 1:17.1.0
+Requires:   python3-pbr >= 2.0.0
+Requires:   python3-oslo-config >= 2:4.0.0
+Requires:   python3-oslo-log >= 3.30.0
+Requires:   python3-oslo-concurrency >= 3.20.0
+Requires:   python3-oslo-serialization >= 2.18.0
+Requires:   python3-oslo-utils >= 3.33.0
+Requires:   python3-paramiko >= 2.0.0
+Requires:   python3-six >= 1.10.0
+Requires:   python3-keystoneclient >= 3.8.0
 
 %description -n python3-%{service}-tests-tempest
 %{common_desc}
@@ -80,8 +81,8 @@ Requires:   python3-keystoneclient
 %package -n python-%{service}-tests-tempest-doc
 Summary:        python-%{service}-tests-tempest documentation
 
-BuildRequires:  python-sphinx
-BuildRequires:  python-openstackdocstheme
+BuildRequires:  python2-sphinx
+BuildRequires:  python2-openstackdocstheme
 
 %description -n python-%{service}-tests-tempest-doc
 It contains the documentation for the mistral tempest plugin.
