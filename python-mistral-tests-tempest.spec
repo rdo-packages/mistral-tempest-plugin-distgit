@@ -1,7 +1,14 @@
+%{!?upstream_version: %global upstream_version %{commit}}
+%global commit d23abaf0e326a406ba29667d637b2587ad08900a
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
+
 %global service mistral
 %global plugin mistral-tempest-plugin
 %global module mistral_tempest_tests
-%global with_doc 1
+# FIXME(chandankumar): Docs building is broken, needs to be fixed
+%global with_doc 0
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
@@ -15,13 +22,13 @@ Additionally it provides a plugin to automatically load these \
 tests into Tempest.
 
 Name:       python-%{service}-tests-tempest
-Version:    XXX
-Release:    XXX
+Version:    0.0.1
+Release:    0.1%{?alphatag}%{?dist}
 Summary:    Tempest Integration of Mistral Project
 License:    ASL 2.0
 URL:        https://git.openstack.org/cgit/openstack/%{plugin}/
 
-Source0:    http://tarballs.openstack.org/%{plugin}/%{plugin}-%{upstream_version}.tar.gz
+Source0:    https://github.com/openstack/%{plugin}/archive/%{commit}.tar.gz#/%{plugin}-%{shortcommit}.tar.gz
 
 BuildArch:  noarch
 
@@ -134,4 +141,7 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %doc doc/build/html
 %license LICENSE
 %endif
+
 %changelog
+* Mon Feb 19 2018 Chandan Kumar <chkumar@redhat.com> 0.0.1-0.1.d23abaf0git
+- Update to pre-release 0.0.1 (d23abaf0e326a406ba29667d637b2587ad08900a)
