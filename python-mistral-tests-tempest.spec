@@ -135,3 +135,4 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %license LICENSE
 %endif
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/mistral-tempest-plugin/commit/?id=95d5f60c7d040d19555bd73df5d595b84f796171
