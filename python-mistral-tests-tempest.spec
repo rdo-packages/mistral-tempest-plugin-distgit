@@ -38,6 +38,8 @@ BuildRequires:  python2-devel
 BuildRequires:  python2-pbr
 BuildRequires:  python2-setuptools
 
+Obsoletes:   python-mistral-tests < 6.0.0
+
 Requires:   python2-tempest >= 1:17.1.0
 Requires:   python2-pbr >= 2.0.0
 Requires:   python2-oslo-config >= 2:4.0.0
