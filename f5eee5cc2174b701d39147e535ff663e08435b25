@@ -1,0 +1,9 @@
+Code-Review+2: Chandan Kumar <chkumar246@gmail.com>
+Code-Review+2: Yatin Karel <ykarel@redhat.com>
+Workflow+1: Yatin Karel <ykarel@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Mon, 01 Apr 2019 13:51:05 +0000
+Reviewed-on: https://review.rdoproject.org/r/19870
+Project: openstack/mistral-tempest-plugin-distgit
+Branch: refs/heads/rpm-master
