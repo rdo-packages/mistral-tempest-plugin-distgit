@@ -22,13 +22,13 @@ Additionally it provides a plugin to automatically load these \
 tests into Tempest.
 
 Name:       python-%{service}-tests-tempest
-Version:    XXX
-Release:    XXX
+Version:    0.2.0
+Release:    1%{?dist}
 Summary:    Tempest Integration of Mistral Project
 License:    ASL 2.0
 URL:        https://git.openstack.org/cgit/openstack/%{plugin}/
 
-Source0:    http://tarballs.openstack.org/%{plugin}/%{plugin}-%{upstream_version}.tar.gz
+Source0:    http://tarballs.openstack.org/%{plugin}/%{module}-%{upstream_version}.tar.gz
 
 BuildArch:  noarch
 
@@ -107,3 +107,6 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %license LICENSE
 %endif
 %changelog
+* Thu Apr 04 2019 RDO <dev@lists.rdoproject.org> 0.2.0-1
+- Update to 0.2.0
+
