@@ -4,6 +4,6 @@ global:Registered-Users	Registered Users
 4572c517702492251ad622a289176552a8acbbb2	rdo-superusers
 6566ba7ec0a6950422c9ced47c7aa51fc3edd718	openstack/mistral-tempest-plugin-core
 d969cd719825a87064097e3e75e0fc6e638f706d	openstack/mistral-tempest-plugin-ptl
-6ddfecad023c6f4fa3ac8c4d2583c502ea675a73	Non-Interactive Users
+6ddfecad023c6f4fa3ac8c4d2583c502ea675a73	Service Users
 global:Anonymous-Users	Anonymous Users
 401cf37bee35d1c809d4d957e55f2a304f8eed69	rdo-provenpackagers
